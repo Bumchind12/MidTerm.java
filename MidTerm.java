@@ -703,3 +703,198 @@ public class Practice4 {
 		System.out.println(Student.average(list));
 	}
 }
+
+
+
+2018.
+class Solution {
+    public int solution(int[] scores, int goal) {
+        int answer = 0;
+        answer = goal * 7;
+        for (int score : scores) {
+            answer -= score;
+        }
+        if (answer > 0) {
+            return answer;
+        } else {
+            return 0;
+        }
+    }
+}
+
+
+
+
+
+
+class Solution {
+    public int solution(int[] input) {
+        int count = 0;
+        for (int water : input) {
+            if (water == 0) count += 1;
+            else count = 0;
+            if (count >= 3) return 0;
+        }
+        return 1;
+    }
+}
+
+
+
+
+
+class Solution {
+    public int solution(String[] param0, String param1) {
+        int winner_count = 0;
+        int count = 0;
+        for (String country : param0) {
+            count += 1;
+            if (country.equals(param1)) winner_count += 1;
+        }
+        return count / winner_count;
+    }
+}
+
+
+
+
+
+
+//아래 코드는 지우지 마세요.
+class Solution {
+    public int solution(int ignore) {
+        int answer = 0;
+        return answer;
+    }
+}
+
+//아래 코드를 조건에 맞게 구현 하세요.
+class Customer {
+    public String name;
+    public int age;
+    public static int numOfCustomers = 0;
+    public String getName() {
+        return this.name;
+    }
+    public int getAge() {
+        return this.age;
+    }
+    public static int getNumOfCustomers() {
+        return numOfCustomers;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+    public Customer() {
+        this.name = "unknown";
+        this.age = 1;
+        this.numOfCustomers += 1;
+    }
+    public Customer(String name, int age) {
+        this.name = name;
+        this.age = age;
+        this.numOfCustomers += 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+//아래 코드를 조건에 맞게 구현 하세요, 필요시 수정해야 합니다.
+
+class Computer{
+    protected String memory;
+    protected String disk;
+    protected boolean powered;
+    public String getMemory() {
+        return this.memory;
+    }
+    public void setMemory(String memory) {
+        this.memory = memory;
+    }
+    public String getDisk() {
+        return this.disk;
+    }
+    public void setDisk(String disk) {
+        this.disk = disk;
+    }
+    public boolean getPowered() {
+        return this.powered;
+    }
+    public void setPowered(boolean powered) {
+        this.powered = powered;
+    }
+    public void powerOn() {
+        this.powered = true;
+    }
+    public Computer() {
+        this.memory = "4GB";
+        this.disk = "300GB";
+        this.powered = false;
+    }
+    public Computer(String memory, String disk, boolean powered) {
+        this.memory = memory;
+        this.disk = disk;
+        this.powered = powered;
+    }
+}
+
+class Notebook extends Computer{
+    private int battery;
+    public int getBattery() {
+        return this.battery;
+    }
+    public void setBattery(double battery) {
+        this.battery = (int)battery;
+    }
+    public void powerOn() {
+        if (this.battery > 0) this.powered = true;
+        else this.powered = false;
+    }
+    public Notebook() {
+        super();
+        this.battery = 100;
+    }
+    public Notebook(String memory, String disk, boolean powered, double battery) {
+        super(memory, disk, powered);
+        this.battery = (int)battery;
+    }
+}
+
+class Desktop extends Computer{
+    private boolean plugged;
+    public boolean getPlugged() {
+        return this.plugged;
+    }
+    public void setPlugged(boolean plugged) {
+        this.plugged = plugged;
+    }
+    public void powerOn() {
+        if (plugged) this.powered = true;
+        else this.powered = false;
+    }
+    public Desktop() {
+        super();
+        this.plugged = false;
+    }
+    public Desktop(String memory, String disk, boolean powered, boolean plugged) {
+        super(memory, disk, powered);
+        this.plugged = plugged;
+    }
+}
+
+//아래 코드는 지우지 마세요
+class Solution {
+    public int solution(int ignore) {
+        int answer = 0;
+        return answer;
+    }
+}
